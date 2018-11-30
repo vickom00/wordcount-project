@@ -1,0 +1,15 @@
+<h1>THERE ARE {{count}} WORDS IN YOUR TEXT</h1>
+
+<a href="{% url 'homepage' %}">Try Again?</a>
+<h1>YOUR TEXT:</h1>
+
+{{fulltext}}
+
+<h3> The total of each words in the text</h3>
+
+{% for word, countsum in sortedwords%}
+
+{{word}} =  {{countsum}}
+<br/>
+
+{%endfor%}
